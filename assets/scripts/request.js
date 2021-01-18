@@ -10,7 +10,6 @@ export const getCityFromApi = (city)=>{
         "timeout": 0,
       };
       $.ajax(settings).done(function (response) {
-        
         getDataFromCity(response.coord.lat,response.coord.lon)
       });
 
@@ -24,6 +23,7 @@ export const getCityFromApi = (city)=>{
           $.ajax(daylyWeather).done(function (response) {
               data = response
               printCurrentDay()
+              
           });
     }
 
