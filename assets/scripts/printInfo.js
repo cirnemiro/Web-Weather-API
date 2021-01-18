@@ -18,6 +18,7 @@ export const printCurrentDay = (day=0)=>{
 }
 export const printNextdays = ()=>{
     const $container = document.querySelector('.nextDays')
+    $container.innerHTML = ''
     data.daily.forEach((day,index) => { 
         const div = document.createElement('div')
         div.innerHTML = `
