@@ -1,0 +1,28 @@
+.nextDays{
+    overflow-x: scroll;
+    display: flex;
+}
+.nextDays__element{
+    background-color: cornflowerblue;
+    margin-right: 10px;
+    text-align: center;
+    min-width: 130px;
+}
+.nextDays_element__title{
+    font-size: 20px;
+}
+.nextDays_element__number{
+    font-size: 50px;
+}
+.nextDays_element__data{
+    display: flex;
+}
+.nextDayselement_data__photo{
+    flex: 1;
+}
+.nextDayselement_data__photo img{
+    width: 100%;
+}
+.nextDays_element_data__content{
+    flex: 1;
+}
