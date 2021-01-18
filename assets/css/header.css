@@ -1,0 +1,31 @@
+.header__title{
+    background-color: aqua;
+    width: 100%;
+    text-align: center;
+    font-family: 'Heebo', sans-serif;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.header__content{
+    padding: 20px;
+    align-content: center;
+    padding-top: 2;
+    
+}
+.header_content__search{
+    display: flex;
+}
+.header_content__title{
+    font-family: 'Heebo', sans-serif;
+    margin-bottom: 5px;
+}
+.header_content_search__input{
+    border-radius: 10px;
+    border: 1px solid black;
+    flex: 4;
+}
+.header_content_search__btn{
+    flex: 1;
+    text-align: center;
+}
+
