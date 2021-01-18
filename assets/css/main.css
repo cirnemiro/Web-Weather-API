@@ -24,9 +24,36 @@ time, mark, audio, video {
     margin-block-start: 0;
     margin-block-end: 0;
 }
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .hidden{
     display: none;
 }
 main{
     padding: 10px;
+}
+
+.currentDay{
+    font-family: 'Roboto', sans-serif;
+    background-color: #348AA7;
+    color: white;
+}
+
+.temperature{
+    font-size: 60px;
+}
+.currentDay__flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon{
+    margin-right: 20px;
+}
+.icon i{
+    font-size: 60px;
+    color: rgb(255, 242, 0);
 }

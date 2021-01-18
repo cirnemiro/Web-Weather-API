@@ -11,10 +11,16 @@
     <!-- script files -->
     <script defer type="module" src="assets/scripts/main.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/8b8872f4fd.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="header">
+
+
+    <header class="header container">
+
+
         <h1 class="header__title">Weather from API</h1>
         <div class="header__content">
             <h3 class="header_content__title">Search your city</h3>
@@ -30,15 +36,16 @@
         </div>
     </header>
     <main>
-        <section class="currentDay">
+        <section class="currentDay container">
             <h3 class="currentDay__title">Barcelona</h3>
             <p class="currentDay__hour">hora actual</p>
-            <div class="currrentDay__flex">
+            <div class="currentDay__flex">
                 <div class="currentDay_flex__element1">
-
+                    <p class="temperature">9º</p>
+                    <p class="weather">Soleado</p>
                 </div>
                 <div class="currentDay_flex__element2">
-
+                    <div class="icon"><i class="fas fa-sun"></i></div>
                 </div>
             </div>
             
