@@ -40,3 +40,22 @@ body{
     padding-top: 10px;
 }
 
+<<<<<<< HEAD
+=======
+.icon{
+    margin-right: 20px;
+}
+.icon i{
+    font-size: 60px;
+    color: rgb(255, 242, 0);
+}
+
+.currentDay__info{
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+}
+.currentDay__info p {
+    text-align: end;
+}
+>>>>>>> a6e365edf77866dd9abeeb4ed7aac82bfc7e6572

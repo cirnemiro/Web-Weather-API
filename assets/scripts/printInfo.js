@@ -35,6 +35,15 @@ export const printCurrentDay = (cityName)=>{
     
     printNextdays()
     
+    $(".moreInfo").click(function(){
+        console.log("hola");
+        $("#feelsLike").html("feels like: " + Math.round(data.current.feels_like - 273.15) + "º");
+        $("#visibility").html("visibility: " + data.current.visibility / 1000 + " km")
+        $("#windSpeed").html("windSpeed: " + data.current.wind_speed);
+        $("humidity").html("humidity: " + data.current.humidity + " %");
+        $("#pressure").html("pressure: " + data.current.pressure + " hPa");
+        $("#uv").html("UV Index: " + data.current.uvi) ;
+    })
 
 
 }
