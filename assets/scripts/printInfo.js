@@ -5,8 +5,8 @@ export const printCurrentDay = (day=0)=>{
 
     $(".currentDay__title").html(document.querySelector('.header_content_search__input').value);
     
-    console.log(data);
-    $(".currentDay__hour").html(data.daily[0].dt);
+    console.log(new Date(data.current.dt * 1000));
+    $(".currentDay__hour").html(new Date(data.daily[0].dt * 1000));
     $(".temperature").html(Math.round(data.current.temp - 273.15) + "º")
     $(".weather").html(data.daily[0].weather[0].description)
 
