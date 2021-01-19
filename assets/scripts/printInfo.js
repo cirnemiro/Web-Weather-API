@@ -1,16 +1,7 @@
 
 import { data,cityNameGlobal } from './request.js'
 
-export const printCurrentDay = (cityName,day=0)=>{
-    
-    console.log(data)
-    $(".currentDay__title").html(cityName.slice(7,cityName.length));
-    let date = new Date(data.current.dt * 1000);
-    console.log(date.getHours())
-    $(".currentDay__hour").html(new Date((data.current.dt - data.timezone_offset) * 1000));
 
-    $(".temperature").html(Math.round(data.daily[0].temp.day - 273.15) + "º")
-    $(".weather").html(data.daily[0].weather[0].description)
 const daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
 
@@ -26,16 +17,13 @@ export const printCurrentDay = (cityName)=>{
     console.log(cityNameGlobal.slice(7,cityNameGlobal.length));
 
     if (cityName) {
-        if (document.querySelector('.header_content_search__input').value) {
-            $(".currentDay__title").html(document.querySelector('.header_content_search__input').value);
-        }else{
-            $(".currentDay__title").html(cityName.slice(7,cityName.length));
-        }
+        $(".currentDay__title").html(cityName.slice(7,cityName.length));
     }else{
         $(".currentDay__title").html(cityNameGlobal.slice(7,cityNameGlobal.length))
     }
     
-    $(".currentDay__hour").html(new Date(data.daily[day].dt * 1000));
+    $(".currentDay__hour").html(new Date(data.current.dt * 1000));
+    let d = (data.current.dt * 1000) + data.timezone_offset;
     
    
     if (day === 0) {
