@@ -2,8 +2,8 @@
 import { data } from './request.js'
 
 export const printCurrentDay = (cityName,day=0)=>{
-    console.log('city name', cityName);
-    $(".currentDay__title").html(cityName);
+ 
+    $(".currentDay__title").html(cityName.slice(7,cityName.length));
     console.log(data.daily[0].weather[0].description);
     $(".currentDay__hour").html(new Date(data.daily[0].dt * 1000));
     $(".temperature").html(Math.round(data.daily[0].temp.day - 273.15) + "º")
