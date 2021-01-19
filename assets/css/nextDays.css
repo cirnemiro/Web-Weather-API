@@ -1,12 +1,17 @@
 .nextDays{
     overflow-x: scroll;
     display: flex;
+    margin-top: 10px;
 }
 .nextDays__element{
-    background-color: cornflowerblue;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgba(100, 148, 237, 0.508);
     margin-right: 10px;
     text-align: center;
     min-width: 130px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
 }
 .nextDays_element__title{
     font-size: 20px;

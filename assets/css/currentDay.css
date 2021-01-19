@@ -1,6 +1,27 @@
-
 .currentDay{
     border-radius: 10px;
-    background-color: cornflowerblue;
-    padding: 5px;
+    background-color: rgba(100, 148, 237, 0.508);
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+.currentDay__title{
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+.temperature{
+    font-size: 80px;
+}
+.currentDay__flex{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.icon{
+    margin-right: 20px;
+}
+.icon i{
+    font-size: 60px;
+    color: rgb(255, 242, 0);
 }
