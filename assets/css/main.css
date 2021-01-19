@@ -57,3 +57,12 @@ main{
     font-size: 60px;
     color: rgb(255, 242, 0);
 }
+
+.currentDay__info{
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+}
+.currentDay__info p {
+    text-align: end;
+}
