@@ -1,6 +1,7 @@
 import { printCurrentDay} from './printInfo.js'
 
 export let data = {}
+export let cityNameGlobal = ''
 
 export const getCityFromApi = (city)=>{
 
@@ -23,6 +24,7 @@ export const getDataFromCity = (lat,lon)=>{
         "timeout": 0,
     };
     $.ajax(daylyWeather).done(function (location) {
+        console.log(location);
         console.log('location',location.plus_code.compound_code.split(','));
         console.log(location.plus_code.compound_code.split(' ')[1].split(',')[0]);
         var daylyWeather = {
@@ -32,7 +34,9 @@ export const getDataFromCity = (lat,lon)=>{
         };
         $.ajax(daylyWeather).done(function (response) {
             data = response
-            printCurrentDay(location.plus_code.compound_code.split(',')[0])  
+            console.log(data);
+            printCurrentDay(location.plus_code.compound_code.split(',')[0]) 
+            cityNameGlobal =  location.plus_code.compound_code.split(',')[0]
         });
         
     });
