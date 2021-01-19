@@ -1,5 +1,5 @@
 // Imports
-import { getCityFromApi } from './request.js'
+import { getCityFromApi , getDataFromCity } from './request.js'
     
 // main script
 $(document).ready(function(){
@@ -8,6 +8,11 @@ $(document).ready(function(){
     })
 
 })    
+
+navigator.geolocation.getCurrentPosition((position)=>{
+    getDataFromCity(position.coords.latitude,position.coords.longitude)
+    console.log(position.coords.latitude,position.coords.longitude);
+})
         
             
                    
