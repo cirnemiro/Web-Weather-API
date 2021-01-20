@@ -31,16 +31,14 @@ export const getDataFromCity = (lat,lon)=>{
         };
         $.ajax(daylyWeather).done(function (response) {
             data = response
-            console.log(response);
-            console.log(location);
-            console.log(location.plus_code.compound_code);
+            
             if (location.plus_code.compound_code){
                 cityNameGlobal =  location.plus_code.compound_code
-                console.log('definded');
+                
                 printCurrentDay(location.plus_code.compound_code) 
             }else{
                 cityNameGlobal = document.querySelector('.header_content_search__input').value
-                console.log('undefined');
+                
                 printCurrentDay() 
             }
         });

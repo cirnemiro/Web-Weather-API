@@ -18,8 +18,8 @@ const changeDay = (e)=>{
 }
 
 export const printCurrentDay = (cityName)=>{
-    console.log(cityName);
-   console.log(day);
+    console.log(data);
+    console.log(day);
     $(".currentDay_flex__element2 img").attr("src", `https://openweathermap.org/img/wn/${data.daily[day].weather[0].icon}@4x.png`)
 
     
@@ -39,9 +39,11 @@ export const printCurrentDay = (cityName)=>{
     if (day === 0) {
         $(".temperature").html(Math.round(data.current.temp - 273.15) + "º")
         $(".max-min").html(`Max: ${Math.round(data.daily[day].temp.max - 273.15)}º / Min: ${Math.round(data.daily[day].temp.min - 273.15)}º`)
+        $(".currentDay_flex__element2 img").attr("src", `https://openweathermap.org/img/wn/${data.current.weather[0].icon}@4x.png`)
     }else{
-      
+        $(".currentDay_flex__element2 img").attr("src", `https://openweathermap.org/img/wn/${data.daily[day].weather[0].icon}@4x.png`)
         $(".max-min").html(`Max: ${Math.round(data.daily[day].temp.max - 273.15)}º / Min: ${Math.round(data.daily[day].temp.min - 273.15)}º`)
+        $(".temperature").html(Math.round(data.daily[day].temp.day - 273.15) + "º")
     }
     $(".weather").html(data.daily[day].weather[0].description)
     
