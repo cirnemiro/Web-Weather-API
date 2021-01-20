@@ -1,6 +1,7 @@
 @import url('header.css');
 @import url('currentDay.css');
 @import url('nextDays.css');
+@import url('loadingTemplate.css');
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -15,7 +16,7 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
+	
 	padding: 0;
 	border: 0;
     font: inherit;
@@ -38,7 +39,7 @@ main{
 body{
     padding: 10px;
     padding-top: 10px;
-    background-image: url('https://media0.giphy.com/media/fSXHTR5nSzKMOPVodt/giphy.gif?cid=ecf05e47b08a5053942998fa792b3d75b722cc1de4be5e96&rid=giphy.gif');
+  
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;

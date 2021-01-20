@@ -1,6 +1,8 @@
 .header{
-    background-color: rgba(100, 148, 237, 0.808);
+   
     border-radius: 10px;
+    background-color: rgb(7, 7, 7);
+    z-index: 10;
 }
 .header__title{
     background-color: aqua;

@@ -31,3 +31,11 @@
 .nextDays_element_data__content{
     flex: 1;
 }
+
+.nextDays_element_data_content_humedad__icon{
+    width: 20%;
+}
+.inline-block{
+    display: inline-block;
+
+}

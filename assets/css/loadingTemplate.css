@@ -1,0 +1,20 @@
+.loadingTemplate{
+    width: 92%;
+    height: calc(100vh - 70px);
+    background-image: url('https://media3.giphy.com/media/xTkcEQACH24SMPxIQg/giphy.gif?cid=ecf05e47pggs2o7f6o5i4kqwg5hi09a94k3zp5ew1unxoz0x&rid=giphy.gif');
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    top: 70px;
+    left: 4%;
+    z-index: 0;
+}
+.loadingTemplate__title{
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+}

@@ -32,14 +32,19 @@ export const getDataFromCity = (lat,lon)=>{
         $.ajax(daylyWeather).done(function (response) {
             data = response
             
+            
             if (location.plus_code.compound_code){
                 cityNameGlobal =  location.plus_code.compound_code
+                $('.loadingTemplate').addClass('hidden')
                 
                 printCurrentDay(location.plus_code.compound_code) 
             }else{
                 cityNameGlobal = document.querySelector('.header_content_search__input').value
-                
+                $('.loadingTemplate').addClass('hidden')
+               
                 printCurrentDay() 
+
+
             }
         });
         

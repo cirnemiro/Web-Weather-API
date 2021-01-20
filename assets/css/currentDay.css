@@ -6,8 +6,17 @@
     color: white;
 }
 .currentDay__title{
-    font-size: 25px;
+    font-size: 37px;
     margin-bottom: 8px;
+}
+.currentDay__hour{
+    font-size: 30px;
+    font-family: 'Inconsolata', monospace;
+}
+.currentDay__day{
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    
 }
 .temperature{
     font-size: 80px;
@@ -31,4 +40,13 @@
 .icon i{
     font-size: 60px;
     color: rgb(255, 242, 0);
+}
+.currentDay__info{
+    margin-bottom: 20px;
+}
+.moreInfo{
+    margin-left: 30px;
+}
+.moreInfo_p{
+    margin-bottom: 10px;
 }

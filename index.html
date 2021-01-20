@@ -11,8 +11,11 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <!-- script files -->
     <script defer type="module" src="assets/scripts/main.js"></script>
+    <!-- googleFonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap" rel="stylesheet">
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/8b8872f4fd.js" crossorigin="anonymous"></script>
 </head>
@@ -34,15 +37,20 @@
         </div>
     </header>
     <main>
+        <section class="loadingTemplate">
+            <h1 class="loadingTemplate__title">Type your city</h1>
+        </section>
+
         <section class="currentDay container">
-            <h3 class="currentDay__title">Barcelona</h3>
-            <p class="currentDay__hour">hora actual</p>
+            <h3 class="currentDay__title"></h3>
+            <p class="currentDay__day"></p>
+            <p class="currentDay__hour"> </p>
             <div class="currentDay__flex">
                 <div class="currentDay_flex__element1">
-                    <p class="temperature">9º</p>
-                    <p class="max">max: 2 / min: 1</p>
-                    <p class="min">max: 2 / min: 1</p>
-                    <p class="weather">Soleado</p>
+                    <p class="temperature"></p>
+                    <p class="max"></p>
+                    <p class="min"></p>
+                    <p class="weather"></p>
                 </div>
                 <div class="currentDay_flex__element2">
                     <!-- <div class="icon"><i class="fas fa-sun"></i></div> -->
@@ -52,17 +60,18 @@
                 
             </div>
             <div class="currentDay__info">
-                <p class="more-info">More info <i class="fa fa-arrow-down" aria-hidden="true"></i></p>
+                <p class="more-info info">More info <i class="fa fa-arrow-down" aria-hidden="true"></i></p>
+                <p class="less-info info hidden">Less info <i class="fa fa-arrow-down" aria-hidden="true"></i></p>
             </div>
-            <div class="moreInfo">
-                <p id="feelsLike"></p>
-                <p id="humidity"></p>
-                <p id="pressure"></p>
-                <p id="visibility"></p>
-                <p id="uv"></p>
-                <p id="windSpeed"></p>
+            <div class="moreInfo hidden">
+                <p class="moreInfo_p" id="feelsLike"></p>
+                <p class="moreInfo_p" id="humidity"></p>
+                <p class="moreInfo_p" id="pressure"></p>
+                <p class="moreInfo_p" id="visibility"></p>
+                <p class="moreInfo_p" id="uv"></p>
+                <p class="moreInfo_p" id="windSpeed"></p>
                 <br>
-                <p id="lessInfo"></p>
+                
             </div>
             
         </section>
