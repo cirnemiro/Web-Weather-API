@@ -73,7 +73,7 @@ export const printNextdays = ()=>{
 
     data.daily.forEach((e,index) => { 
         const div = document.createElement('div')
-        if (weekDay>=7) {
+        if (weekDay>=6) {
             weekDay=0
         }else{
             weekDay++
