@@ -1,5 +1,6 @@
 import { printCurrentDay} from './printInfo.js'
 
+
 export let data = {}
 export let cityNameGlobal = ''
 

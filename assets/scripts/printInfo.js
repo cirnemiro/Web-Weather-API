@@ -1,11 +1,13 @@
 
 import { data,cityNameGlobal } from './request.js'
+import { themes } from './weatherObj.js'
 
 
 const daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
 
 let day = 0
+
 
 const changeDay = (e)=>{
     console.log(e.target.parentNode.id);
@@ -17,7 +19,9 @@ export const printCurrentDay = (cityName)=>{
     console.log(data);
     console.log(data.daily[day].weather[0].main);
 
-    // document.querySelector('body').style.backgroundImage= `url('https://media4.giphy.com/media/76miNUQaZGPxFqLlBB/giphy.gif?cid=ecf05e476vuhxhax1gyohec7hpxnl9zj9yxzr30lwgruisv7&rid=giphy.gif')`
+    let weather = data.daily[day].weather[0].main
+    
+
 
     if (cityName) {
         $(".currentDay__title").html(cityName.slice(7,cityName.length));
@@ -47,6 +51,48 @@ export const printCurrentDay = (cityName)=>{
         $("#pressure").html("pressure: " + data.current.pressure + " hPa");
         $("#uv").html("UV Index: " + data.current.uvi) ;
     })
+
+
+    switch (weather) {
+        case 'Clouds':
+            document.querySelector('body').style.backgroundImage=  `url('${themes.clouds.gif}')`
+            document.querySelector('.currentDay').style.backgroundColor = ' rgba(100, 148, 237, 0.708)'
+            document.querySelector('.nextDays__element').style.backgroundColor = '  rgba(100, 148, 237, 0.708)'
+            document.querySelector('.header').style.backgroundColor = '  rgba(100, 148, 237, 0.708)'
+            break;
+        case 'Snow':
+            document.querySelector('body').style.backgroundImage=  `url('${themes.snow.gif}')`
+            document.querySelector('.currentDay').style.backgroundColor = '  rgba(53, 53, 54, 0.708)'
+            document.querySelector('.nextDays__element').style.backgroundColor = '  rgba(53, 53, 54, 0.708)'
+            document.querySelector('.header').style.backgroundColor = '  rgba(53, 53, 54, 0.708)'
+            break;
+        case 'Drizzle':
+            document.querySelector('body').style.backgroundImage=  `url('${themes.drizzle.gif}')`
+            document.querySelector('.currentDay').style.backgroundColor = '  rgba(53, 53, 54, 0.708)'
+            document.querySelector('.nextDays__element').style.backgroundColor = '  rgba(53, 53, 54, 0.708)'
+            document.querySelector('.header').style.backgroundColor = '  rgba(53, 53, 54, 0.708)'
+            break;
+        case 'Thunderstorm':
+            document.querySelector('body').style.backgroundImage=  `url('${themes.thunderstorm.gif}')`
+            document.querySelector('.currentDay').style.backgroundColor = '  rgba(53, 53, 54, 0.708)'
+            document.querySelector('.nextDays__element').style.backgroundColor = '  rgba(53, 53, 54, 0.708)'
+            document.querySelector('.header').style.backgroundColor = '  rgba(53, 53, 54, 0.708)'
+            break;   
+        case 'Clear':
+            document.querySelector('body').style.backgroundImage=  `url('${themes.clear.gif}')`
+            document.querySelector('.currentDay').style.backgroundColor = '  rgba(156, 229, 255, 0.708)'
+            document.querySelector('.nextDays__element').style.backgroundColor = '  rgba(156, 229, 255, 0.708)'
+            document.querySelector('.header').style.backgroundColor = '  rgba(156, 229, 255, 0.708)'
+            break; 
+        case 'Rain':
+            document.querySelector('body').style.backgroundImage=  `url('${themes.rain.gif}')`
+            document.querySelector('.currentDay').style.backgroundColor = '  rgba(53, 53, 54, 0.708)'
+            document.querySelector('.nextDays__element').style.backgroundColor = '  rgba(53, 53, 54, 0.708)'
+            document.querySelector('.header').style.backgroundColor = '  rgba(53, 53, 54, 0.708)'
+            break;
+        default:
+            break;
+    }
 
 
 }
