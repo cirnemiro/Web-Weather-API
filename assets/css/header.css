@@ -1,3 +1,7 @@
+.header{
+    background-color: rgba(100, 148, 237, 0.508);
+    border-radius: 10px;
+}
 .header__title{
     background-color: aqua;
     width: 100%;
@@ -7,7 +11,7 @@
     margin-bottom: 20px;
 }
 .header__content{
-    padding: 20px;
+    padding: 15px;
     align-content: center;
     padding-top: 2;
     
@@ -20,9 +24,11 @@
     margin-bottom: 5px;
 }
 .header_content_search__input{
-    border-radius: 10px;
-    border: 1px solid black;
+    border-radius: 20px;
+    border: none;
     flex: 4;
+    padding: 5px;
+    font-family: 'Roboto', sans-serif;
 }
 .header_content_search__btn{
     flex: 1;

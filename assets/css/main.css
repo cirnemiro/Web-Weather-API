@@ -33,23 +33,15 @@ time, mark, audio, video {
     display: none;
 }
 main{
+    margin-top: 10px;
+}
+body{
     padding: 10px;
+    padding-top: 10px;
 }
 
-.currentDay{
-    font-family: 'Roboto', sans-serif;
-    background-color: #348AA7;
-    color: white;
-}
-
-.temperature{
-    font-size: 60px;
-}
-.currentDay__flex{
-    display: flex;
-    justify-content: space-between;
-}
-
+<<<<<<< HEAD
+=======
 .icon{
     margin-right: 20px;
 }
@@ -57,3 +49,13 @@ main{
     font-size: 60px;
     color: rgb(255, 242, 0);
 }
+
+.currentDay__info{
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+}
+.currentDay__info p {
+    text-align: end;
+}
+>>>>>>> a6e365edf77866dd9abeeb4ed7aac82bfc7e6572

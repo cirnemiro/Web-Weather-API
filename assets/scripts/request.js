@@ -35,7 +35,7 @@ export const getDataFromCity = (lat,lon)=>{
         $.ajax(daylyWeather).done(function (response) {
             data = response
             console.log(data);
-            printCurrentDay(location.plus_code.compound_code.split(',')[0]) 
+            printCurrentDay(location.plus_code.compound_code) 
             cityNameGlobal =  location.plus_code.compound_code.split(',')[0]
         });
         

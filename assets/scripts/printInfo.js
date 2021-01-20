@@ -1,6 +1,7 @@
 
 import { data,cityNameGlobal } from './request.js'
 
+
 const daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
 
@@ -16,16 +17,13 @@ export const printCurrentDay = (cityName)=>{
     console.log(cityNameGlobal.slice(7,cityNameGlobal.length));
 
     if (cityName) {
-        if (document.querySelector('.header_content_search__input').value) {
-            $(".currentDay__title").html(document.querySelector('.header_content_search__input').value);
-        }else{
-            $(".currentDay__title").html(cityName.slice(7,cityName.length));
-        }
+        $(".currentDay__title").html(cityName.slice(7,cityName.length));
     }else{
         $(".currentDay__title").html(cityNameGlobal.slice(7,cityNameGlobal.length))
     }
     
-    $(".currentDay__hour").html(new Date(data.daily[day].dt * 1000));
+    $(".currentDay__hour").html(new Date(data.current.dt * 1000));
+    let d = (data.current.dt * 1000) + data.timezone_offset;
     
    
     if (day === 0) {
@@ -37,6 +35,15 @@ export const printCurrentDay = (cityName)=>{
     
     printNextdays()
     
+    $(".moreInfo").click(function(){
+        console.log("hola");
+        $("#feelsLike").html("feels like: " + Math.round(data.current.feels_like - 273.15) + "º");
+        $("#visibility").html("visibility: " + data.current.visibility / 1000 + " km")
+        $("#windSpeed").html("windSpeed: " + data.current.wind_speed);
+        $("humidity").html("humidity: " + data.current.humidity + " %");
+        $("#pressure").html("pressure: " + data.current.pressure + " hPa");
+        $("#uv").html("UV Index: " + data.current.uvi) ;
+    })
 
 
 }
