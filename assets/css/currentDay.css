@@ -11,13 +11,20 @@
 }
 .temperature{
     font-size: 80px;
+    text-align: center;
 }
 .currentDay__flex{
     display: flex;
     justify-content: space-between;
     padding-top: 20px;
+    align-items: center;
 }
-
+.currentDay_flex__element1{
+    margin:  0 0px 40px 20px;
+}
+.weather{
+    text-align: center;
+}
 .icon{
     margin-right: 20px;
 }

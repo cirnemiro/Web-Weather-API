@@ -16,6 +16,7 @@ const changeDay = (e)=>{
 export const printCurrentDay = (cityName)=>{
     console.log(data);
     console.log(data.daily[day].weather[0].main);
+    $(".currentDay_flex__element2 img").attr("src", `https://openweathermap.org/img/wn/${data.current.weather[0].icon}@4x.png`)
 
     // document.querySelector('body').style.backgroundImage= `url('https://media4.giphy.com/media/76miNUQaZGPxFqLlBB/giphy.gif?cid=ecf05e476vuhxhax1gyohec7hpxnl9zj9yxzr30lwgruisv7&rid=giphy.gif')`
 
@@ -31,6 +32,7 @@ export const printCurrentDay = (cityName)=>{
    
     if (day === 0) {
         $(".temperature").html(Math.round(data.current.temp - 273.15) + "º")
+        $(".max-min").html(`Max: ${Math.round(data.daily[day].temp.max - 273.15)}º / Min: ${Math.round(data.daily[day].temp.min - 273.15)}º`)
     }else{
         $(".temperature").html(Math.round(data.daily[day].temp.day - 273.15) + "º")
     }
@@ -71,7 +73,7 @@ export const printNextdays = ()=>{
                 <p class="nextDays_element__number">${numberDay}</p>
                 <div class="nextDays_element__data">
                     <div class="nextDayselement_data__photo">
-                        <img src="https://img.icons8.com/color/452/sun-star.png" alt="">
+                        <img src="https://openweathermap.org/img/wn/${data.daily[weekDay].weather[0].icon}@4x.png" alt="">
                     </div>
                     <div class="nextDays_element_data__content">
                         <p class="nextDays_element_data_content__temp">${Math.round(day.temp.min-273.15)}º/${Math.round(day.temp.max-273.15)}º</p>
