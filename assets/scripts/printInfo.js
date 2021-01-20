@@ -20,7 +20,6 @@ const changeDay = (e)=>{
 export const printCurrentDay = (cityName)=>{
     console.log(data);
     console.log(day);
-    $(".currentDay_flex__element2 img").attr("src", `https://openweathermap.org/img/wn/${data.daily[day].weather[0].icon}@4x.png`)
 
     
     
@@ -40,12 +39,13 @@ export const printCurrentDay = (cityName)=>{
         $(".temperature").html(Math.round(data.current.temp - 273.15) + "º")
         $(".max-min").html(`Max: ${Math.round(data.daily[day].temp.max - 273.15)}º / Min: ${Math.round(data.daily[day].temp.min - 273.15)}º`)
         $(".currentDay_flex__element2 img").attr("src", `https://openweathermap.org/img/wn/${data.current.weather[0].icon}@4x.png`)
+        $(".weather").html(data.current.weather[0].description)
     }else{
         $(".currentDay_flex__element2 img").attr("src", `https://openweathermap.org/img/wn/${data.daily[day].weather[0].icon}@4x.png`)
         $(".max-min").html(`Max: ${Math.round(data.daily[day].temp.max - 273.15)}º / Min: ${Math.round(data.daily[day].temp.min - 273.15)}º`)
         $(".temperature").html(Math.round(data.daily[day].temp.day - 273.15) + "º")
+        $(".weather").html(data.daily[day].weather[0].description)
     }
-    $(".weather").html(data.daily[day].weather[0].description)
     
     
     
@@ -91,7 +91,7 @@ export const printNextdays = ()=>{
                         </div>
                         <div class="nextDays_element_data__content">
                             <p class="nextDays_element_data_content__temp">${Math.round(e.temp.min-273.15)}º/${Math.round(e.temp.max-273.15)}º</p>
-                            <p class="nextDays_element_data_content__humedad">${day.humidity}%</p>
+                            <p class="nextDays_element_data_content__humedad">${data.daily[index].humidity}%</p>
                         </div>
                     </div>
                 </div>
@@ -107,7 +107,7 @@ export const printNextdays = ()=>{
                         </div>
                         <div class="nextDays_element_data__content">
                             <p class="nextDays_element_data_content__temp">${Math.round(e.temp.min-273.15)}º/${Math.round(e.temp.max-273.15)}º</p>
-                            <p class="nextDays_element_data_content__humedad">${day.humidity}%</p>
+                            <p class="nextDays_element_data_content__humedad">${data.daily[index].humidity}%</p>
                         </div>
                     </div>
                 </div>
