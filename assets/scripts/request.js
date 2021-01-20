@@ -14,7 +14,6 @@ export const getCityFromApi = (city)=>{
       $.ajax(settings).done(function (response) {
         getDataFromCity(response.coord.lat,response.coord.lon)
       });
-
       
     }
 export const getDataFromCity = (lat,lon)=>{
@@ -32,8 +31,18 @@ export const getDataFromCity = (lat,lon)=>{
         };
         $.ajax(daylyWeather).done(function (response) {
             data = response
-            printCurrentDay(location.plus_code.compound_code) 
-            cityNameGlobal =  location.plus_code.compound_code.split(',')[0]
+            console.log(response);
+            console.log(location);
+            console.log(location.plus_code.compound_code);
+            if (location.plus_code.compound_code){
+                cityNameGlobal =  location.plus_code.compound_code
+                console.log('definded');
+                printCurrentDay(location.plus_code.compound_code) 
+            }else{
+                cityNameGlobal = document.querySelector('.header_content_search__input').value
+                console.log('undefined');
+                printCurrentDay() 
+            }
         });
         
     });

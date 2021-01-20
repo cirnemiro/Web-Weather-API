@@ -5,6 +5,7 @@ import { getCityFromApi , getDataFromCity } from './request.js'
 $(document).ready(function(){
         $('.header_content_search__btn').click(()=>{
         getCityFromApi(document.querySelector('.header_content_search__input').value)
+        
     })
 
 })    
