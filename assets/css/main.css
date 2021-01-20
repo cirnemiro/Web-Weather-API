@@ -38,24 +38,8 @@ main{
 body{
     padding: 10px;
     padding-top: 10px;
+    background-image: url('https://media0.giphy.com/media/fSXHTR5nSzKMOPVodt/giphy.gif?cid=ecf05e47b08a5053942998fa792b3d75b722cc1de4be5e96&rid=giphy.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
 }
-
-<<<<<<< HEAD
-=======
-.icon{
-    margin-right: 20px;
-}
-.icon i{
-    font-size: 60px;
-    color: rgb(255, 242, 0);
-}
-
-.currentDay__info{
-    display: flex;
-    justify-content: end;
-    align-items: flex-end;
-}
-.currentDay__info p {
-    text-align: end;
-}
->>>>>>> a6e365edf77866dd9abeeb4ed7aac82bfc7e6572

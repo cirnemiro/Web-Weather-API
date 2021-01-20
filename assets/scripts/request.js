@@ -24,9 +24,6 @@ export const getDataFromCity = (lat,lon)=>{
         "timeout": 0,
     };
     $.ajax(daylyWeather).done(function (location) {
-        console.log(location);
-        console.log('location',location.plus_code.compound_code.split(','));
-        console.log(location.plus_code.compound_code.split(' ')[1].split(',')[0]);
         var daylyWeather = {
             "url": `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&appid=f6820db6e831308eb1bb1eeecb5ce0a3`,
             "method": "GET",
@@ -34,7 +31,6 @@ export const getDataFromCity = (lat,lon)=>{
         };
         $.ajax(daylyWeather).done(function (response) {
             data = response
-            console.log(data);
             printCurrentDay(location.plus_code.compound_code) 
             cityNameGlobal =  location.plus_code.compound_code.split(',')[0]
         });

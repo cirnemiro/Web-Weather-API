@@ -14,7 +14,10 @@ const changeDay = (e)=>{
 }
 
 export const printCurrentDay = (cityName)=>{
-    console.log(cityNameGlobal.slice(7,cityNameGlobal.length));
+    console.log(data);
+    console.log(data.daily[day].weather[0].main);
+
+    // document.querySelector('body').style.backgroundImage= `url('https://media4.giphy.com/media/76miNUQaZGPxFqLlBB/giphy.gif?cid=ecf05e476vuhxhax1gyohec7hpxnl9zj9yxzr30lwgruisv7&rid=giphy.gif')`
 
     if (cityName) {
         $(".currentDay__title").html(cityName.slice(7,cityName.length));
@@ -85,17 +88,6 @@ export const printNextdays = ()=>{
 }
 
 
-
-
-const hola = (a,b)=>{
-
-
-    return a+b
-}
-
-
-
-console.log(hola(1,3));
 
 
 

@@ -11,7 +11,6 @@ $(document).ready(function(){
 
 navigator.geolocation.getCurrentPosition((position)=>{
     getDataFromCity(position.coords.latitude,position.coords.longitude)
-    console.log(position.coords.latitude,position.coords.longitude);
 })
         
             
