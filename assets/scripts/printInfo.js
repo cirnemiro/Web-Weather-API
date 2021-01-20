@@ -37,27 +37,37 @@ export const printCurrentDay = (cityName)=>{
    
     if (day === 0) {
         $(".temperature").html(Math.round(data.current.temp - 273.15) + "º")
-        $(".max-min").html(`Max: ${Math.round(data.daily[day].temp.max - 273.15)}º / Min: ${Math.round(data.daily[day].temp.min - 273.15)}º`)
+        $(".max").html(`Max: ${Math.round(data.daily[day].temp.max - 273.15)} º`)
+        $(".min").html(`Min: ${Math.round(data.daily[day].temp.min - 273.15)} º`)
         $(".currentDay_flex__element2 img").attr("src", `https://openweathermap.org/img/wn/${data.current.weather[0].icon}@4x.png`)
-        $(".weather").html(data.current.weather[0].description)
+        $(".weather").html(` weather: ${data.current.weather[0].description}`)
     }else{
         $(".currentDay_flex__element2 img").attr("src", `https://openweathermap.org/img/wn/${data.daily[day].weather[0].icon}@4x.png`)
-        $(".max-min").html(`Max: ${Math.round(data.daily[day].temp.max - 273.15)}º / Min: ${Math.round(data.daily[day].temp.min - 273.15)}º`)
+        $(".max").html(`Max: ${Math.round(data.daily[day].temp.max - 273.15)} º`)
+        $(".min").html(`Min: ${Math.round(data.daily[day].temp.min - 273.15)} º`)
+
         $(".temperature").html(Math.round(data.daily[day].temp.day - 273.15) + "º")
-        $(".weather").html(data.daily[day].weather[0].description)
+        $(".weather").html(` weather: ${data.current.weather[0].description}`)
     }
     
     
     
-    $(".moreInfo").click(function(){
+    $(".more-info").click(function(){
         console.log("hola");
+        $(".moreInfo").show();
         $("#feelsLike").html("feels like: " + Math.round(data.current.feels_like - 273.15) + "º");
         $("#visibility").html("visibility: " + data.current.visibility / 1000 + " km")
         $("#windSpeed").html("windSpeed: " + data.current.wind_speed);
         $("humidity").html("humidity: " + data.current.humidity + " %");
         $("#pressure").html("pressure: " + data.current.pressure + " hPa");
-        $("#uv").html("UV Index: " + data.current.uvi) ;
-    })
+        $("#uv").html("UV Index: " + data.current.uvi);
+        $("#lessInfo").html('Less info <i class="fa fa-arrow-up" aria-hidden="true"></i>');
+        $(".more-info").hide();
+        $("#lessInfo").click(function(){
+            $(".more-info").show();
+            $(".moreInfo").hide();
+        })
+    });
 
 
     
@@ -96,6 +106,7 @@ export const printNextdays = ()=>{
                     </div>
                 </div>
             `
+            $(".currentDay__hour").html(daysOfTheWeek[weekDay]);
         }else{
             div.innerHTML = `
                 <div id='${index}' class="nextDays__element ">
@@ -112,6 +123,7 @@ export const printNextdays = ()=>{
                     </div>
                 </div>
             `
+            $(".currentDay__hour").html(daysOfTheWeek[weekDay]);
         }
         $container.appendChild(div)
         div.addEventListener('click',changeDay)
